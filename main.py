@@ -1,5 +1,3 @@
-
-
 import csv
 import pdb
 from os.path import exists
