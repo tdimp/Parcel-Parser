@@ -1,6 +1,4 @@
-# This program is meant to aid in the comparison of city parcels' zoning and future land use designations. The goal is to find parcels
-# whose current zoning does not roughly align with the future land use designation envisioned in the Comprehensive Plan. This will help
-# the planning department focus their efforts on the parcels in need of a change in future land use designation.
+
 
 import csv
 import pdb
