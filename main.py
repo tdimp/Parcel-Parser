@@ -1,5 +1,4 @@
 import csv
-import pdb
 from os.path import exists
 from separate_pds import separate_pds
 from separate_city_parcels import separate_city_parcels
@@ -70,25 +69,3 @@ if __name__ == "__main__":
         separate_city_parcels(parcels_minus_pds, input_file) # Loops through the parcel list sans PDs to remove parcels not in city limits
     if not exists(output_file):
         find_mismatched_parcels()
-
-
-
-
-"""
-unique zone districts: 
-'PD', 'SFA', 'POS', 'BP', 
-'NS', 'CR', None, 'EO', 'EB', 
-'ES', 'RE', 'SFD', 'MC', 'MF', 
-'ETD', 'I', 'RC', 'CC', 'ER', 
-'MH', 'A', 'DR'
-"""
-
-"""
-unique FLUM categories: 
-'Institutional', 'Mixed Residential Neighborhoods', 
-'Regional Mixed-Use', None, 'Mixed-Use Neighborhoods', 
-'Employment Center', 'Employment Center - Warehousing Overlay', 
-'Estate Neighborhood', 'None', 'Parks, Trails, and Open Space', 
-'Transit-Oriented Development', 'Single-Family Neighborhoods', 
-'Community Mixed-Use', 'Commercial'
-"""
