@@ -1,3 +1,4 @@
+
 import csv
 from os.path import exists
 from separate_pds import separate_pds
@@ -20,8 +21,8 @@ MIXED_RESIDENTIAL_NEIGHBORHOODS = {'SFA', 'SFD', 'MF'}
 MIXED_USE_NEIGHBORHOODS = {'SFA', 'SFD', 'MF', 'CR', 'NS'}
 COMMERCIAL = {'CR', 'RC', 'CC', 'NS'}
 COMMUNITY_MIXED_USE = {'CR', 'SFA', 'MF', 'NS'}
-REGIONAL_MIXED_USE = {'CC', 'BP', 'NS', 'SFA', 'MF'}
-TRANSIT_ORIENTED_DEVELOPMENT = {'TOD', 'MU', 'NS'}
+REGIONAL_MIXED_USE = {'CC', 'NS', 'SFA', 'MF', 'RC'}
+TRANSIT_ORIENTED_DEVELOPMENT = {'TOD', 'MU', 'NS', 'ES', 'ER', 'EB', 'EO'}
 EMPOLOYMENT_CENTER = {'EC', 'BP'}
 EMPLOYMENT_CENTER_WAREHOUSE = {'EC', 'BP', 'I'}
 INSTITUTIONAL = {'OI'}
@@ -69,3 +70,7 @@ if __name__ == "__main__":
         separate_city_parcels(parcels_minus_pds, input_file) # Loops through the parcel list sans PDs to remove parcels not in city limits
     if not exists(output_file):
         find_mismatched_parcels()
+
+
+
+import csv

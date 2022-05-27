@@ -11,9 +11,6 @@ def separate_pds(input, output1, output2):
         fieldnames = ['PARCEL_PIN', 'SOURCE', 'Future Land Use Code', 'ZONING_DISTRICT', 'SUBDIVISION_PLAT_NAME']
         reader = csv.DictReader(csvfile)
 
-        # Loop through parcel list, checking for PD zoning.
-        # If ZONING_DISTRICT == PD, copy that row to pudlist.csv
-        # else, copy row to parcelsnopds.csv
         pdfile = open(output1, 'w', newline='')
         writer1 = csv.DictWriter(pdfile, fieldnames=fieldnames)
         writer1.writeheader()
