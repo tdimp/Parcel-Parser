@@ -10,7 +10,7 @@ def get_unique_pds(input, output):
         
         subs = []
         for row in reader:
-            subs.append(row['SUBDIVISION_PLAT_NAME'])
+            subs.append(row['SUBDIVISION_NAME'])
 
         unique_subs = set(subs)
 

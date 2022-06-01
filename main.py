@@ -12,7 +12,7 @@ unique_pd_list = 'uniquepds.csv'
 
 input_file = 'cityparcels.csv'
 output_file = 'reducedlist.csv'
-fieldnames = ['PARCEL_PIN', 'SOURCE', 'Future Land Use Code', 'ZONING_DISTRICT', 'SUBDIVISION_PLAT_NAME']
+fieldnames = ['PARCEL_PIN', 'SOURCE', 'ZONING_DISTRICT', 'FUTURE_LAND_USE', 'SUBDIVISION_NAME']
 
 
 ESTATE_NEIGHBORHOOD = {'RE'}
@@ -54,7 +54,7 @@ def find_mismatched_parcels():
         writer.writeheader()
 
         for row in reader:
-            future_land_use = row['Future Land Use Code']
+            future_land_use = row['FUTURE_LAND_USE']
             zoning = row['ZONING_DISTRICT']
             zones_not_in_future_land = FUTURE_LAND_USE_CODE_TO_ZONING_DISTRICT.get(future_land_use)
             if zones_not_in_future_land is not None and zoning not in zones_not_in_future_land:

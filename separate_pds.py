@@ -8,7 +8,7 @@ import csv
 
 def separate_pds(input, output1, output2):
     with open(input, newline='', encoding='utf-8-sig') as csvfile:
-        fieldnames = ['PARCEL_PIN', 'SOURCE', 'Future Land Use Code', 'ZONING_DISTRICT', 'SUBDIVISION_PLAT_NAME']
+        fieldnames = ['PARCEL_PIN', 'SOURCE', 'ZONING_DISTRICT', 'FUTURE_LAND_USE', 'SUBDIVISION_NAME']
         reader = csv.DictReader(csvfile)
 
         pdfile = open(output1, 'w', newline='')
